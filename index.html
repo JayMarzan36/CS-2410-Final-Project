@@ -1,0 +1,86 @@
+<html>
+
+<head>
+    <title>Amazing Movie Database</title>
+    <script src="api.js" defer></script>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="index.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu,search" />
+
+
+</head>
+
+<body>
+
+    <nav class="nav" id="nav">
+        <button id="menu-btn" class="material-symbols-outlined">menu</button>
+        <h1>Amazing Movie Database</h1>
+        <div id="nav-contents">
+            <div id="nav-contents-home">
+                <a href="index.html?query="><span>Home</span></a>
+            </div>
+
+            <div id="nav-contents-movie">
+                <a href="movies.html?query="><span>Movie</span></a>
+            </div>
+
+            <div id="nav-contents-tv">
+                <a href="tv.html?query="><span>Tv</span></a>
+            </div>
+
+            <div id="nav-contents-people">
+                <a href="people.html?query="><span>People</span></a>
+            </div>
+        </div>
+    </nav>
+
+    <div id="search-div">
+        <div>
+            <select id="search-type">
+                <option selected value="all">All</option>
+                <option value="movies">Movies</option>
+                <option value="tv">Tv</option>
+                <option value="people">People</option>
+            </select>
+            <input id="search-text" type="text" placeholder="Search..." />
+            <button id="search-btn"><span class="material-symbols-outlined">search</span></button>
+
+        </div>
+    </div>
+
+    <main id="main-content">
+
+        <div>
+            <h2 id="trending-movies-h">Trending Movies</h2>
+
+            <div id="trending-movies">
+
+            </div>
+        </div>
+
+
+        <div>
+            <h2 id="trending-tv-h">Trending Tv</h2>
+
+            <div id="trending-tv">
+            </div>
+        </div>
+
+        <div>
+            <h2 id="trending-people-h">Trending People</h2>
+
+            <div id="trending-people">
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

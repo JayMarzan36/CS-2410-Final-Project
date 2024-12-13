@@ -1,0 +1,169 @@
+:root {
+    font-family: "Cabin", serif;
+
+    --primaryColor: #f72585;
+    --secondColor: #7209b7;
+    --middleColor: #3a0ca3;
+    --lightBlue: #4361ee;
+    --lighterBlue: #4cc9f0;
+    --yellowColor: #ffd500;
+}
+
+body {
+    color: var(--yellowColor);
+    background-color: var(--middleColor);
+}
+
+@keyframes cardBackground {
+    0% {
+        border: solid 6px var(--yellowColor);
+    }
+
+    50% {
+        border: solid 6px var(--primaryColor);
+    }
+}
+
+@keyframes cardClick {
+    to {
+        opacity: 0;
+    }
+}
+
+.card {
+    overflow: hidden;
+    position: inherit;
+    top: auto;
+    width: 200px;
+    height: 380px;
+    background-color: var(--secondColor);
+    border: solid 6px var(--yellowColor);
+    border-radius: 10px;
+    margin: 20px 20px 20px 20px;
+    box-shadow: 9px 9px rgba(0, 0, 0, 0.7);
+    transition: all 0.3s ease;
+}
+
+.card>a {
+    color: var(--lighterBlue);
+}
+
+.card[data-click="true"] {
+    animation: cardClick 2s forwards;
+}
+
+.card:hover {
+    scale: 1.1;
+    box-shadow: none;
+    animation: cardBackground 2s infinite;
+}
+
+.card:not(:hover) {
+    scale: 1.0;
+}
+
+.nav>h1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    min-width: 500px;
+}
+
+#search-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-width: 500px;
+}
+
+#search-type {
+    border-radius: 50px;
+    height: 30px;
+    width: 100px;
+    cursor: pointer;
+}
+
+#search-type>option {
+    cursor: pointer;
+}
+
+#search-text {
+    height: 30px;
+    width: 200px;
+    border-radius: 50px;
+}
+
+#search-btn {
+    position: relative;
+    cursor: pointer;
+    top: 7px;
+    left: -43px;
+    background-color: white;
+    border: none;
+    border-radius: 50px;
+    height: 25px;
+}
+
+#menu-btn {
+    height: 30px;
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    background-clip: text;
+    color: transparent;
+}
+
+#nav-contents {
+    width: 60px;
+    height: 80px;
+    background-color: var(--secondColor);
+    border: 2px solid var(--yellowColor);
+    border-radius: 5px;
+    position: absolute;
+    left: -100px;
+    top: 50px;
+    padding: 5px;
+    transition: all 0.3s ease;
+}
+
+#nav-contents>div>a {
+    color: var(--lighterBlue);
+
+}
+
+#nav-contents[data-open="true"] {
+    left: 10px;
+}
+
+#search-div {
+    display: flex;
+    justify-content: center;
+}
+
+#peoples {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#more-btn-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+#more-results-btn {
+    cursor: pointer;
+    border: solid 3px var(--yellowColor);
+    border-radius: 5px;
+    color: var(--lighterBlue);
+    background-color: var(--secondColor);
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.7);
+    transition: all 0.3s ease;
+}
+
+#more-results-btn:hover {
+    scale: 1.1;
+    box-shadow: none;
+}

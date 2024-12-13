@@ -1,0 +1,80 @@
+<html>
+
+<head>
+    <title>CS2410 Final Project</title>
+    <script src="api.js" defer></script>
+    <script src="series.js" defer></script>
+    <link rel="stylesheet" href="series.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu,search" />
+
+</head>
+
+<body>
+
+    <nav class="nav" id="nav">
+        <button id="menu-btn" class="material-symbols-outlined">menu</button>
+        <h1>Amazing Movie Database</h1>
+        <div id="nav-contents">
+            <div id="nav-contents-home">
+                <a href="index.html?query="><span>Home</span></a>
+            </div>
+
+            <div id="nav-contents-movie">
+                <a href="movies.html?query="><span>Movie</span></a>
+            </div>
+
+            <div id="nav-contents-tv">
+                <a href="tv.html?query="><span>Tv</span></a>
+            </div>
+
+            <div id="nav-contents-people">
+                <a href="people.html?query="><span>People</span></a>
+            </div>
+        </div>
+    </nav>
+
+    <div id="search-div">
+        <div>
+            <select id="search-type">
+                <option selected value="all">All</option>
+                <option value="movies">Movies</option>
+                <option value="tv">Tv</option>
+                <option value="people">People</option>
+            </select>
+            <input id="search-text" type="text" placeholder="Search..." />
+            <button id="search-btn"><span class="material-symbols-outlined">search</span></button>
+
+        </div>
+    </div>
+
+
+    <h1>Series Details</h1>
+
+
+    <div id="centerThis">
+        <div id="image-div"></div>
+        <div id="series-info">
+            <h2 id="series-title"></h2>
+            <div id="running-time"></div>
+            <div id="num-of-seasons"></div>
+            <div id="num-of-episode"></div>
+            <div id="rating"></div>
+            <div id="overview"></div>
+            <div id="series-id"></div>
+        </div>
+    </div>
+
+    <h1>Cast</h1>
+    <div id="credits"></div>
+
+</body>
+
+</html>
